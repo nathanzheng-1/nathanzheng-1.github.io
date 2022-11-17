@@ -1,0 +1,35 @@
+.gradient-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 64px;
+    background-image: linear-gradient(to right, #1c5452 0%, #3d99be 31%, #56317a 100%);
+    background-size: 100%;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.intro {
+    font-family: 'Courier New';
+    font-size: 18px;
+    margin: 2%;
+    font-weight: bold;
+    line-height: 1.75;
+
+    display: inline-block
+}
+
+.all {
+    margin: 4%;
+}
+
+.timelinetitle {
+    font-family: 'Courier New';
+    font-size: 32px;
+    font-weight: bold;
+    margin: 2%;
+    display: inline-block
+}
+
+.paper {}
