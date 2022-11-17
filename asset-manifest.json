@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ed2630b.css",
-    "main.js": "/static/js/main.6e186434.js",
+    "main.css": "/static/css/main.cc59336e.css",
+    "main.js": "/static/js/main.0683f22a.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/profilepic.jpg": "/static/media/profilepic.6a4ab01c8a5a0bd35a66.jpg",
     "static/media/spotify.jpg": "/static/media/spotify.25567da1f3ecd539232e.jpg",
     "static/media/firewatch.jpg": "/static/media/firewatch.cff8456e6d8fca65a4b9.jpg",
     "static/media/ukulazer.jpg": "/static/media/ukulazer.a5c22c11d2203ad7fabe.jpg",
+    "static/media/chargepoint.jpg": "/static/media/chargepoint.a310dc339084edf88ca8.jpg",
     "static/media/sneakers.jpg": "/static/media/sneakers.e7e74c8cef27423cd4c7.jpg",
     "static/media/zoom.jpg": "/static/media/zoom.e7508ec6bdc3bf13630f.jpg",
+    "static/media/meta.jpg": "/static/media/meta.9de2a21de67407ac2067.jpg",
     "index.html": "/index.html",
-    "main.5ed2630b.css.map": "/static/css/main.5ed2630b.css.map",
-    "main.6e186434.js.map": "/static/js/main.6e186434.js.map",
+    "main.cc59336e.css.map": "/static/css/main.cc59336e.css.map",
+    "main.0683f22a.js.map": "/static/js/main.0683f22a.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ed2630b.css",
-    "static/js/main.6e186434.js"
+    "static/css/main.cc59336e.css",
+    "static/js/main.0683f22a.js"
   ]
 }
