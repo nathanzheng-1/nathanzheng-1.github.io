@@ -12,6 +12,7 @@ export default function CardComponent(props) {
     const img = props.image;
     const github = props.github;
     const devpost = props.devpost;
+    const skills = props.skills;
     return (
         <Card sx={{ maxWidth: 345, minWidth: 345, minHeight: 400, maxHeight: 400 }}>
             <CardMedia
@@ -24,12 +25,15 @@ export default function CardComponent(props) {
                 <Typography gutterBottom variant="h5" component="div">
                     {title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                {skills && <Typography sx={{ mb: 1.5 }} variant="body2" color="text.secondary">
+                    {skills}
+                </Typography>}
+                <Typography variant="body2" >
                     {description}
                 </Typography>
             </CardContent>
             {(github || devpost) &&
-                <CardActions disableSpacing={true}>
+                <CardActions sx={{ mt: -1.5 }} disableSpacing={true}>
                     {github && <Button size="small" href={github}>Github</Button>}
                     {devpost && <Button size="small" href={devpost}>Devpost</Button>}
 

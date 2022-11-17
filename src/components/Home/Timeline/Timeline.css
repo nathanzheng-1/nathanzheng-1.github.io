@@ -4,9 +4,6 @@ body {
 }
 
 
-
-
-
 .flex-parent {
     display: flex;
     flex-direction: column;
@@ -14,7 +11,6 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    margin-top: 6%;
 
 }
 
@@ -22,27 +18,34 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     width: 80vw;
-    height: 100px;
-    max-width: 1000px;
+    max-width: 90%;
     position: relative;
     z-index: 0;
+
+    margin-top: 6%;
 }
 
-.input {
+input {
     width: 25px;
     height: 25px;
     background-color: #2C3E50;
     position: relative;
     border-radius: 50%;
-}
-
-.input:hover {
+    display: block;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
     cursor: pointer;
 }
 
-.input::before,
-.input::after {
+input:focus {
+    outline: none;
+}
+
+input::before,
+input::after {
     content: "";
     display: block;
     position: absolute;
@@ -51,136 +54,159 @@ body {
     transform: translateY(-50%);
     background-color: #2C3E50;
     width: 4vw;
-    height: 4px;
+    height: 5px;
     max-width: 50px;
 }
 
-.input::before {
+input::before {
     left: calc(-4vw + 12.5px);
 }
 
-.input::after {
+input::after {
     right: calc(-4vw + 12.5px);
 }
 
-.input.active {
+input:checked {
     background-color: #2C3E50;
 }
 
-.input.active::before {
+input:checked::before {
     background-color: #2C3E50;
 }
 
-.input.active::after {
+input:checked::after {
     background-color: #AEB6BF;
 }
 
-.input.active span {
-    font-weight: 700;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.input.active span::before {
-    font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.input.active span::after {
-    font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.input.active~.input,
-.input.active~.input::before,
-.input.active~.input::after {
+input:checked~input,
+input:checked~input::before,
+input:checked~input::after {
     background-color: #AEB6BF;
 }
 
-.input span {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.input span::before,
-.input span::after {
-    visibility: visible;
-    position: absolute;
-    left: 50%;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.input span::after {
-    content: attr(data-year);
-    top: 25px;
-    transform: translateX(-50%);
-    font-size: 15px;
-}
-
-.input span::before {
-    content: attr(data-info);
-    top: -65px;
-    width: 70px;
-    transform: translateX(-5px) rotateZ(-45deg);
-    font-size: 14px;
-    text-indent: -10px;
-}
-
-.description-flex-container {
-    width: 80vw;
-    font-weight: 400;
-    font-size: 16px;
-    margin-top: 4%;
-    max-width: 1000px;
-    font-family: 'Courier New', Courier, monospace;
+input:checked+.dot-info span {
+    font-size: 13px;
     font-weight: bold;
 }
 
-.description-flex-container p {
+.dot-info {
+    width: 25px;
+    height: 25px;
+    display: block;
+    visibility: hidden;
+    position: relative;
+    z-index: -1;
+    left: calc((((80vw - 25px) / 20) * -1) - 1px);
+}
+
+.dot-info span {
+    visibility: visible;
+    position: absolute;
+    font-size: 12px;
+}
+
+.dot-info span.year {
+    bottom: -30px;
+    left: 110%;
+    transform: translateX(-50%);
+}
+
+.dot-info span.label {
+    top: -65px;
+    left: 65%;
+    transform: rotateZ(-45deg);
+    width: 100px;
+    text-indent: -10px;
+}
+
+#timeline-descriptions-wrapper {
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: calc((-80vw - 25px) / 20);
+}
+
+#timeline-descriptions-wrapper p {
     margin-top: 0;
     display: none;
 }
 
-.description-flex-container p.active {
+
+input[data-description="2017"]:checked~#timeline-descriptions-wrapper p[data-description="2017"] {
+    display: block;
+}
+
+input[data-description="July 2017"]:checked~#timeline-descriptions-wrapper p[data-description="July 2017"] {
+    display: block;
+}
+
+input[data-description="2019"]:checked~#timeline-descriptions-wrapper p[data-description="2019"] {
+    display: block;
+}
+
+input[data-description="Sep. 2019"]:checked~#timeline-descriptions-wrapper p[data-description="Sep. 2019"] {
+    display: block;
+}
+
+input[data-description="Nov. 2019"]:checked~#timeline-descriptions-wrapper p[data-description="Nov. 2019"] {
+    display: block;
+}
+
+input[data-description="Mar. 2020"]:checked~#timeline-descriptions-wrapper p[data-description="Mar. 2020"] {
+    display: block;
+}
+
+input[data-description="Aug. 2020"]:checked~#timeline-descriptions-wrapper p[data-description="Aug. 2020"] {
+    display: block;
+}
+
+input[data-description="2021"]:checked~#timeline-descriptions-wrapper p[data-description="2021"] {
+    display: block;
+}
+
+input[data-description="Feb. 2021"]:checked~#timeline-descriptions-wrapper p[data-description="Feb. 2021"] {
+    display: block;
+}
+
+input[data-description="June 2021"]:checked~#timeline-descriptions-wrapper p[data-description="June 2021"] {
+    display: block;
+}
+
+input[data-description="Sep. 2021"]:checked~#timeline-descriptions-wrapper p[data-description="Sep. 2021"] {
+    display: block;
+}
+
+input[data-description="2022"]:checked~#timeline-descriptions-wrapper p[data-description="2022"] {
+    display: block;
+}
+
+input[data-description="May 2022"]:checked~#timeline-descriptions-wrapper p[data-description="May 2022"] {
     display: block;
 }
 
 @media (min-width: 1250px) {
-    .input::before {
+    .input-flex-container {}
+
+    input::before {
         left: -37.5px;
     }
 
-    .input::after {
+    input::after {
         right: -37.5px;
     }
-}
 
-@media (max-width: 850px) {
-    .input {
-        width: 17px;
-        height: 17px;
+    .dot-info {
+        left: calc((((1000px - 25px) / 20) * -1) - 1px);
     }
 
-    .input::before,
-    .input::after {
-        height: 3px;
-    }
-
-    .input::before {
-        left: calc(-4vw + 8.5px);
-    }
-
-    .input::after {
-        right: calc(-4vw + 8.5px);
+    #timeline-descriptions-wrapper {
+        margin-left: -37.5px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .flex-parent {
         justify-content: initial;
     }
@@ -188,50 +214,86 @@ body {
     .input-flex-container {
         flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
+        width: 400px;
         height: auto;
         margin-top: 15vh;
+        margin-left: 0;
+        padding-bottom: 30px;
     }
 
-    .input {
+    input,
+    .dot-info {
         width: 60px;
         height: 60px;
         margin: 0 10px 50px;
-        background-color: #AEB6BF;
     }
 
-    .input::before,
-    .input::after {
+    input {
+        background-color: transparent !important;
+        z-index: 1;
+    }
+
+    input::before,
+    input::after {
         content: none;
     }
 
-    .input span {
-        width: 100%;
-        height: 100%;
-        display: block;
+    input:checked+.dot-info {
+        background-color: #2C3E50;
     }
 
-    .input span::before {
+    input:checked+.dot-info span.year {
+        font-size: 14px;
+    }
+
+    input:checked+.dot-info span.label {
+        font-size: 12px;
+    }
+
+    .dot-info {
+        visibility: visible;
+        border-radius: 50%;
+        z-index: 0;
+        left: 0;
+        margin-left: -70px;
+        background-color: #AEB6BF;
+    }
+
+    .dot-info span.year {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ECF0F1;
+    }
+
+    .dot-info span.label {
         top: calc(100% + 5px);
+        left: 50%;
         transform: translateX(-50%);
         text-indent: 0;
         text-align: center;
     }
 
-    .input span::after {
-        top: 50%;
-        transform: translate(-50%, -50%);
-        color: #ECF0F1;
-    }
-
-    .description-flex-container {
+    #timeline-descriptions-wrapper {
         margin-top: 30px;
+        margin-left: 0;
         text-align: center;
     }
 }
 
+@media (max-width: 480px) {
+    .input-flex-container {
+        width: 340px;
+    }
+}
+
 @media (max-width: 400px) {
-    body {
-        min-height: 950px;
+    .input-flex-container {
+        width: 300px;
     }
 }

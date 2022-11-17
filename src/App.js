@@ -2,6 +2,9 @@ import './App.css';
 import Home from './components/Home/Home';
 import Sidebar from './components/Sidebar/Sidebar';
 import Projects from './components/Projects/Projects';
+import Internships from './components/Internships/Internships';
+import Coursework from './components/Coursework/Coursework';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,14 +33,14 @@ const routes = [
     path: "/experience",
     exact: true,
     sidebar: <div>Experience</div>,
-    page: () => <Home />
+    page: () => <Internships />
 
   },
   {
     path: "/coursework",
     exact: true,
     sidebar: <div>Coursework</div>,
-    page: () => <Home />
+    page: () => <Coursework />
 
   },
 

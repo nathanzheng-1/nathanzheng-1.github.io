@@ -1,5 +1,5 @@
 .gradient-text {
-    font-family: 'Courier New', Courier, monospace;
+
     font-size: 64px;
     background-image: linear-gradient(to right, #1c5452 0%, #3d99be 31%, #56317a 100%);
     background-size: 100%;
@@ -11,7 +11,7 @@
 }
 
 .intro {
-    font-family: 'Courier New';
+
     font-size: 18px;
     margin: 2%;
     font-weight: bold;
@@ -25,7 +25,7 @@
 }
 
 .timelinetitle {
-    font-family: 'Courier New';
+
     font-size: 32px;
     font-weight: bold;
     margin: 2%;
