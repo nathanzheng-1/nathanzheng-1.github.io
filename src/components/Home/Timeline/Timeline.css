@@ -190,11 +190,11 @@ input[data-description="May 2022"]:checked~#timeline-descriptions-wrapper p[data
     .input-flex-container {}
 
     input::before {
-        left: -37.5px;
+        left: -50px;
     }
 
     input::after {
-        right: -37.5px;
+        right: -50px;
     }
 
     .dot-info {
