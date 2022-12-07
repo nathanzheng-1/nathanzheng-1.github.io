@@ -1,6 +1,6 @@
 .gradient-text {
 
-    font-size: 64px;
+    font-size: 4.5vw;
     background-image: linear-gradient(to right, #1c5452 0%, #3d99be 31%, #56317a 100%);
     background-size: 100%;
     font-weight: 600;
@@ -12,21 +12,20 @@
 
 .intro {
 
-    font-size: 18px;
+    font-size: 1.2vw;
     margin: 2%;
     font-weight: bold;
     line-height: 1.75;
-
     display: inline-block
 }
 
-.all {
+.allintro {
     margin: 4%;
 }
 
 .timelinetitle {
 
-    font-size: 32px;
+    font-size: 2.2vw;
     font-weight: bold;
     margin: 2%;
     display: inline-block

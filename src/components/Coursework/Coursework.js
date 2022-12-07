@@ -42,7 +42,7 @@ export default function Coursework() {
                             <ul>
                                 <li>Fall
                                     <ul>
-                                        <li>CS 4410: Operating SYstems</li>
+                                        <li>CS 4410: Operating Systems</li>
                                         <li>CS 2850: Networks</li>
                                         <li>AEM 2210: Financial Accounting</li>
                                         <li>HADM 2410: Marketing Principles</li>

@@ -65,6 +65,8 @@ export default function Sidebar(props) {
                                 className="nav-icon"
                                 title={icon.name}
                                 color="inherit"
+                                rel="noopener noreferrer"
+                                target="_blank"
 
                             >
                                 {icon.icon}

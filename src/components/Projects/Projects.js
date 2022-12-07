@@ -17,7 +17,7 @@ const info = [{
 {
     title: 'Sneaker Price Predictor',
     skills: 'Python, Tensorflow',
-    description: 'My program consists of two parts: the first scrapes standardized sneaker pictures and priec data off of StockX for training and testing of the model. The second part is a convolutional neural network based off of Inception ResNet that predicts the price of new sneakers.',
+    description: 'My program consists of two parts: the first scrapes standardized sneaker pictures and price data off of StockX for training and testing of the model. The second part is a convolutional neural network based off of Inception ResNet that predicts the price of new sneakers.',
     image: sneakers,
     github: 'https://github.com/nathanzheng-1/sneakerCNN',
 },

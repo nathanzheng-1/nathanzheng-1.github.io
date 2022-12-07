@@ -53,7 +53,7 @@ function App() {
     <Router>
       <Route render={({ location }) => (
         <div className='appRow'>
-          <div className='sidebar'>
+          <div >
             <Sidebar children={routes} />
           </div>
           <div className='main'>

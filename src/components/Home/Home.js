@@ -7,7 +7,7 @@ export default function Home(props) {
     return (
 
         <div className='bg'>
-            <div className='all'>
+            <div className='allintro'>
                 <div className='gradient-text'> Hi, I'm Nathan!</div>
 
                 <div className='intro'>Nice to meet you! I'm a senior at Cornell studying computer science and minoring in business.

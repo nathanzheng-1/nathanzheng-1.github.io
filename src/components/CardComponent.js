@@ -14,28 +14,40 @@ export default function CardComponent(props) {
     const devpost = props.devpost;
     const skills = props.skills;
     return (
-        <Card sx={{ maxWidth: 345, minWidth: 345, minHeight: 400, maxHeight: 400 }}>
+        <Card sx={{ maxWidth: '24vw', minWidth: '24vw', }}>
             <CardMedia
                 component="img"
-                height="140"
+                sx={{ height: '12vw' }}
                 image={img}
-                alt="green iguana"
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography fontSize='1.5vw' gutterBottom variant="h5" component="div">
                     {title}
                 </Typography>
-                {skills && <Typography sx={{ mb: 1.5 }} variant="body2" color="text.secondary">
+                {skills && <Typography sx={{ mb: '0.2vw' }} fontSize='0.9vw' variant="body2" color="text.secondary">
                     {skills}
                 </Typography>}
-                <Typography variant="body2" >
+                <Typography fontSize='1.1vw' variant="body2" >
                     {description}
                 </Typography>
             </CardContent>
             {(github || devpost) &&
-                <CardActions sx={{ mt: -1.5 }} disableSpacing={true}>
-                    {github && <Button size="small" href={github}>Github</Button>}
-                    {devpost && <Button size="small" href={devpost}>Devpost</Button>}
+                <CardActions sx={{ mb: '0.1vw', ml: '0.2vw', mt: '-0.8vw' }} disableSpacing={true}>
+                    {github && <Button
+                        sx={{ mr: '0.2vw' }}
+                        size="small"
+                        href={github}
+                        rel="noopener noreferrer"
+                        target="_blank" >
+                        <Typography fontSize='1vw'>Github</Typography>
+
+                    </Button>}
+                    {devpost && <Button size="small"
+                        href={devpost}
+                        rel="noopener noreferrer"
+                        target="_blank" >
+                        <Typography fontSize='1vw'>Devpost</Typography>
+                    </Button>}
 
                 </CardActions>}
 

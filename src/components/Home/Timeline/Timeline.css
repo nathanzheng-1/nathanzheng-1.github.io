@@ -85,7 +85,7 @@ input:checked~input::after {
 }
 
 input:checked+.dot-info span {
-    font-size: 13px;
+    font-size: 0.9vw;
     font-weight: bold;
 }
 
@@ -102,7 +102,7 @@ input:checked+.dot-info span {
 .dot-info span {
     visibility: visible;
     position: absolute;
-    font-size: 12px;
+    font-size: 0.9vw;
 }
 
 .dot-info span.year {
@@ -112,10 +112,10 @@ input:checked+.dot-info span {
 }
 
 .dot-info span.label {
-    top: -65px;
-    left: 65%;
+    top: -5vw;
+
     transform: rotateZ(-45deg);
-    width: 100px;
+    width: 10vw;
     text-indent: -10px;
 }
 
@@ -123,7 +123,7 @@ input:checked+.dot-info span {
     width: 100%;
     margin-top: 6%;
     margin-bottom: 2%;
-    font-size: 16px;
+    font-size: 1vw;
     font-weight: 400;
     margin-left: calc((-80vw - 25px) / 20);
 }
